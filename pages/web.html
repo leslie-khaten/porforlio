@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design – Leslie Khaten</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <style>
+    @font-face {
+      font-family: 'Futura Bk BT';
+      src: url('/assets/fonts/futurabkbtrusbyme_book.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .web-section {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .web-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .web-section h2 {
+      font-size: 32px;
+      font-family: 'Futura Bk BT', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .web-section p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .web-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .web-item {
+      text-align: center;
+    }
+
+    .web-item img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .web-item h4 a {
+      color: #111;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .web-item p {
+      font-size: 14px;
+      color: #444;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-container">
+      <a href="/index.html" class="logo">
+        <img src="/assets/img/leslie-echezuria-logo-1.webp" alt="Leslie Khaten Logo" />
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+      <nav class="menu">
+        <a href="/index.html">Home</a>
+        <a href="/pages/design.html">Design</a>
+        <a href="/pages/video.html">Video</a>
+        <a href="/pages/web.html" class="active">Web</a>
+        <a href="/pages/marketing.html">Marketing</a>
+        <a href="/pages/contact.html" class="button">Say Hi</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <section class="web-section">
+      <div class="web-container">
+        <h2>Web Design & WordPress Development</h2>
+        <p>
+          I create custom websites using WordPress — combining intuitive UX, clean design, and performance optimization. Each site is tailored to the brand’s identity and business goals, whether it’s an e-commerce platform, a corporate site, or a service-based landing page.
+        </p>
+
+        <div class="web-grid">
+          <div class="web-item">
+            <img src="/assets/img/web/dbankonline.webp" alt="dbankonline.com website" />
+            <h4><a href="https://dbankonline.com" target="_blank">dbankonline.com</a></h4>
+            <p>Banking site with a strong brand presence and clean navigation</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/clovermudanzas.webp" alt="clovermudanzas.com website" />
+            <h4><a href="https://clovermudanzas.com" target="_blank">clovermudanzas.com</a></h4>
+            <p>Moving services website with bilingual structure</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/cloverlifeve.webp" alt="cloverlifeve.com website" />
+            <h4><a href="https://www.cloverfileve.com/en/" target="_blank">cloverfileve.com</a></h4>
+            <p>Elegant online presence for a luxury moving brand</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/taurel.webp" alt="taurel.com website" />
+            <h4><a href="https://taurel.com" target="_blank">taurel.com</a></h4>
+            <p>Corporate site for a logistics and import company, with a clean, premium layout</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/neuropathyreliefmiami.webp" alt="neuropathyreliefmiami.com website" />
+            <h4><a href="https://neuropathyreliefmiami.com" target="_blank">neuropathyreliefmiami.com</a></h4>
+            <p>Medical landing page with content-focused design and conversion goals</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/shoecharmslovers.webp" alt="shoecharmslovers.com website" />
+            <h4><a href="https://shoecharmslovers.com" target="_blank">shoecharmslovers.com</a></h4>
+            <p>Fun, colorful e-commerce for fashion accessories and custom charms</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/ch4x4.webp" alt="ch4x4.com website" />
+            <h4><a href="https://ch4x4.com" target="_blank">ch4x4.com</a></h4>
+            <p>Rugged e-commerce for off-road auto gear — bold visuals, clean structure</p>
+          </div>
+
+          <div class="web-item">
+            <img src="/assets/img/web/hippypups.webp" alt="hippypups.com website" />
+            <h4><a href="https://hippypups.com" target="_blank">hippypups.com</a></h4>
+            <p>Pet accessory store with playful branding and smooth shopping experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LET'S CONNECT -->
+  <section class="connect-wrapper">
+    <div class="connect">
+      <div class="connect-text">
+        <h2>Let’s connect</h2>
+        <p>Got a project in mind, a collaboration, or just want to say hi?</p>
+        <p>I’m always open to new ideas and conversations.</p>
+        <p>Reach out via email or connect with me through my social media platforms.</p>
+      </div>
+      <div class="connect-button">
+        <a href="/pages/contact.html" class="button">Say Hi</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Leslie Khaten</p>
+  </footer>
+
+</body>
+</html>
