@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Web Design – Leslie Khaten</title>
- <link rel="stylesheet" href="../assets/css/style.css" />
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="icon" href="/assets/img/favicon.png" type="image/png" />
+  <link rel="icon" href="../assets/img/favicon.png" type="image/png" />
+
   <style>
     @font-face {
       font-family: 'Futura Bk BT';
-      src: url('/assets/fonts/futurabkbtrusbyme_book.otf') format('opentype');
+      src: url('../assets/fonts/futurabkbtrusbyme_book.otf') format('opentype');
       font-weight: normal;
       font-style: normal;
     }
@@ -68,6 +70,50 @@
       font-size: 14px;
       color: #444;
     }
+
+    /* MENU RESPONSIVE */
+    .menu-toggle {
+      display: none;
+    }
+
+    .hamburger {
+      font-size: 2rem;
+      cursor: pointer;
+      display: block;
+    }
+
+    .menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      right: 2rem;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+
+    .menu-toggle:checked + .hamburger + .menu {
+      display: flex;
+    }
+
+    @media (min-width: 768px) {
+      .menu {
+        display: flex !important;
+        flex-direction: row;
+        position: static;
+        background: none;
+        box-shadow: none;
+        padding: 0;
+        gap: 2rem;
+      }
+
+      .hamburger {
+        display: none;
+      }
+    }
   </style>
 </head>
 
@@ -85,7 +131,7 @@
         <a href="../index.html">Home</a>
         <a href="design.html">Design</a>
         <a href="video.html">Video</a>
-        <a href="web.html">Web</a>
+        <a href="web.html" class="active">Web</a>
         <a href="marketing.html">Marketing</a>
         <a href="contact.html" class="button">Say Hi</a>
       </nav>
@@ -103,50 +149,50 @@
 
         <div class="web-grid">
           <div class="web-item">
-            <img src="/assets/img/web/dbankonline.webp" alt="dbankonline.com website" />
-            <h4><a href="https://dbankonline.com" target="_blank">dbankonline.com</a></h4>
+            <img src="../assets/img/web/dbankonline.webp" loading="lazy" alt="Homepage of dbankonline.com" />
+            <h4><a href="https://dbankonline.com" target="_blank" rel="noopener noreferrer">dbankonline.com</a></h4>
             <p>Banking site with a strong brand presence and clean navigation</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/clovermudanzas.webp" alt="clovermudanzas.com website" />
-            <h4><a href="https://clovermudanzas.com" target="_blank">clovermudanzas.com</a></h4>
+            <img src="../assets/img/web/clovermudanzas.webp" loading="lazy" alt="Homepage of clovermudanzas.com" />
+            <h4><a href="https://clovermudanzas.com" target="_blank" rel="noopener noreferrer">clovermudanzas.com</a></h4>
             <p>Moving services website with bilingual structure</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/cloverlifeve.webp" alt="cloverlifeve.com website" />
-            <h4><a href="https://www.cloverfileve.com/en/" target="_blank">cloverfileve.com</a></h4>
+            <img src="../assets/img/web/cloverlifeve.webp" loading="lazy" alt="Homepage of cloverlifeve.com" />
+            <h4><a href="https://www.cloverlifeve.com/en/" target="_blank" rel="noopener noreferrer">cloverlifeve.com</a></h4>
             <p>Elegant online presence for a luxury moving brand</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/taurel.webp" alt="taurel.com website" />
-            <h4><a href="https://taurel.com" target="_blank">taurel.com</a></h4>
+            <img src="../assets/img/web/taurel.webp" loading="lazy" alt="Homepage of taurel.com" />
+            <h4><a href="https://taurel.com" target="_blank" rel="noopener noreferrer">taurel.com</a></h4>
             <p>Corporate site for a logistics and import company, with a clean, premium layout</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/neuropathyreliefmiami.webp" alt="neuropathyreliefmiami.com website" />
-            <h4><a href="https://neuropathyreliefmiami.com" target="_blank">neuropathyreliefmiami.com</a></h4>
+            <img src="../assets/img/web/neuropathyreliefmiami.webp" loading="lazy" alt="Homepage of neuropathyreliefmiami.com" />
+            <h4><a href="https://neuropathyreliefmiami.com" target="_blank" rel="noopener noreferrer">neuropathyreliefmiami.com</a></h4>
             <p>Medical landing page with content-focused design and conversion goals</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/shoecharmslovers.webp" alt="shoecharmslovers.com website" />
-            <h4><a href="https://shoecharmslovers.com" target="_blank">shoecharmslovers.com</a></h4>
+            <img src="../assets/img/web/shoecharmslovers.webp" loading="lazy" alt="Homepage of shoecharmslovers.com" />
+            <h4><a href="https://shoecharmslovers.com" target="_blank" rel="noopener noreferrer">shoecharmslovers.com</a></h4>
             <p>Fun, colorful e-commerce for fashion accessories and custom charms</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/ch4x4.webp" alt="ch4x4.com website" />
-            <h4><a href="https://ch4x4.com" target="_blank">ch4x4.com</a></h4>
+            <img src="../assets/img/web/ch4x4.webp" loading="lazy" alt="Homepage of ch4x4.com" />
+            <h4><a href="https://ch4x4.com" target="_blank" rel="noopener noreferrer">ch4x4.com</a></h4>
             <p>Rugged e-commerce for off-road auto gear — bold visuals, clean structure</p>
           </div>
 
           <div class="web-item">
-            <img src="/assets/img/web/hippypups.webp" alt="hippypups.com website" />
-            <h4><a href="https://hippypups.com" target="_blank">hippypups.com</a></h4>
+            <img src="../assets/img/web/hippypups.webp" loading="lazy" alt="Homepage of hippypups.com" />
+            <h4><a href="https://hippypups.com" target="_blank" rel="noopener noreferrer">hippypups.com</a></h4>
             <p>Pet accessory store with playful branding and smooth shopping experience</p>
           </div>
         </div>
@@ -164,7 +210,7 @@
         <p>Reach out via email or connect with me through my social media platforms.</p>
       </div>
       <div class="connect-button">
-        <a href="/pages/contact.html" class="button">Say Hi</a>
+        <a href="contact.html" class="button">Say Hi</a>
       </div>
     </div>
   </section>
