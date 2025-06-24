@@ -1442,4 +1442,63 @@ ul.custom-bullets li {
       }
     }
 
+.menu-toggle {
+  display: none;
+}
 
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  color: #00A9C9;
+  background: none;
+  border: none;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .menu a {
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  .menu-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.menu-toggle { display: none; }
+.hamburger { font-size: 2rem; display: block; }
+.menu { display: none; position: absolute; ... }
