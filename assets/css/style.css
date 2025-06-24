@@ -1289,6 +1289,61 @@ ul.custom-bullets li {
   background-color: #008aa7;
 }
 
+ .web-section {
+      padding: 80px 20px;
+      background-color: #fff;
+    }
+
+    .web-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .web-section h2 {
+      font-size: 32px;
+      font-family: 'Futura Bk BT', sans-serif;
+      margin-bottom: 20px;
+    }
+
+    .web-section p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.6;
+    }
+
+    .web-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+    }
+
+    .web-item {
+      text-align: center;
+    }
+
+    .web-item img {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      display: block;
+      margin: 0 auto 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .web-item h4 a {
+      color: #111;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .web-item p {
+      font-size: 14px;
+      color: #444;
+    }
+ 
+
 
 
 
