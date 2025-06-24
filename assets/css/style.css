@@ -1442,3 +1442,33 @@ ul.custom-bullets li {
       }
     }
 }
+
+.contact-wrapper {
+  padding: 60px 20px;
+  background-color: #f7f7f7;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-text {
+  flex: 1 1 400px;
+}
+
+.contact-photo {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.contact-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
