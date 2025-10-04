@@ -3,12 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leslie Khaten – Graphic Design</title>
+  <meta name="description" content="Leslie Khaten - Graphic Designer specializing in branding, packaging, web design, and digital marketing. Creating visual identities that connect brands with their audience." />
+  <meta name="keywords" content="graphic design, branding, packaging design, web design, digital marketing, SEO, visual identity" />
+  <meta name="author" content="Leslie Khaten" />
+  
+  <title>Leslie Khaten – Graphic Designer & Brand Strategist</title>
+  
   <link rel="stylesheet" href="assets/css/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link rel="icon" href="../assets/img/favicon.png" type="image/png" />
-
-
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" />
   
   <style>
     @font-face {
@@ -27,13 +30,14 @@
     </a>
 
     <!-- Toggle checkbox -->
-    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-    <label for="menu-toggle" class="hamburger">&#9776;</label>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu" />
+    <label for="menu-toggle" class="hamburger" aria-label="Open navigation menu">&#9776;</label>
 
     <!-- Menu Links -->
     <nav class="menu">
-      <a href="index.html">Home</a>
-      <a href="pages/design.html">Design</a>
+      <a href="pages/design.html">Branding</a>
+      <a href="pages/Packaging.html">Packaging</a>
+      <a href="pages/editorial.html">Editorial</a>
       <a href="pages/video.html">Video</a>
       <a href="pages/web.html">Web</a>
       <a href="pages/marketing.html">Marketing</a>
@@ -47,14 +51,15 @@
       <div class="about-content">
         <div class="intro">
           <h1>More than design – I build visual identities that connect.</h1>
-          <h2 class="highlighted-heading">Bringing clarity to brands across web, print, and strategy.</h2>
+          
 
-          <a class="button" href="/pages/contact.html">Say Hi</a>
+          
         </div>
         <div class="about-text">
           <h2>Hi, I’m <span class="highlight">Leslie</span></h2>
           <p>I work at the intersection of graphic design, digital marketing, and web development. My specialty is building visually strong, functional, and search-optimized brand identities.</p>
           <p>I’ve created packaging for brands like Mattel, Kodak, and Daewoo, developed digital branding, and managed creative campaigns with SEO strategy.</p>
+          <a class="button" href="/pages/contact.html">Say Hi</a>
         </div>
       </div>
       <div class="about-photo">
@@ -65,33 +70,37 @@
     <section class="experience">
       <div class="experience-header">
         <h2>Experience</h2>
-        <a href="https://www.linkedin.com/in/leslie-echezuria-khaten/" target="_blank">View more on LinkedIn →</a>
+        <a href="https://www.linkedin.com/in/leslie-echezuria-khaten/" target="_blank" rel="noopener noreferrer">View more on LinkedIn →</a>
       </div>
-      <div class="experience-grid">
-        <div class="job">
-          <p class="date">2020 – Present</p>
+      <div class="experience-grid" role="list">
+        <article class="job" role="listitem">
+          <time class="date" datetime="2025">2025 – Present</time>
+          <p><strong>Digital Ya (España)</strong><br>SEO Specialist</p>
+        </article>
+        <article class="job" role="listitem">
+          <time class="date" datetime="2020">2020 – Present</time>
           <p><strong>Alphaeus (USA)</strong><br>Senior Web Designer + SEO Specialist</p>
-        </div>
-        <div class="job">
-          <p class="date">2017 – 2019</p>
+        </article>
+        <article class="job" role="listitem">
+          <time class="date" datetime="2017-2019">2017 – 2019</time>
           <p><strong>Amodil (ARG)</strong><br>Senior Graphic Designer</p>
-        </div>
-        <div class="job">
-          <p class="date">2016 – 2017</p>
+        </article>
+        <article class="job" role="listitem">
+          <time class="date" datetime="2016-2017">2016 – 2017</time>
           <p><strong>Triada Tec / Nexina (ARG)</strong><br>Retail Packaging & Catalog Designer</p>
-        </div>
-        <div class="job">
-          <p class="date">2016</p>
+        </article>
+        <article class="job" role="listitem">
+          <time class="date" datetime="2016">2016</time>
           <p><strong>Artez Westerley (ARG)</strong><br>Graphic & Web Designer</p>
-        </div>
-        <div class="job">
-          <p class="date">2014 – 2015</p>
+        </article>
+        <article class="job" role="listitem">
+          <time class="date" datetime="2014-2015">2014 – 2015</time>
           <p><strong>Supermayorista Vital</strong><br>Marketing Analyst</p>
-        </div>
-        <div class="job">
-          <p class="date">2012 – 2014</p>
+        </article>
+        <article class="job" role="listitem">
+          <time class="date" datetime="2012-2014">2012 – 2014</time>
           <p><strong>LiderLogo</strong><br>Junior Graphic Designer</p>
-        </div>
+        </article>
       </div>
     </section>
   </main>
@@ -106,29 +115,29 @@
         </div>
       </div>
       
-      <div class="skill-cards">
-        <div class="card">
+      <div class="skill-cards" role="list">
+        <article class="card" role="listitem">
           <img src="assets/icons/branding.webp" alt="Branding icon" class="card-icon" />
           <h3>Branding & Visual Identity</h3>
           <p>I design brand identities that go beyond logos—clear, consistent, and full of personality. From concept to guidelines, I make brands feel aligned across every touchpoint.</p>
-          <a href="/pages/design.html">View Projects →</a>
-        </div>
+          <a href="pages/design.html" aria-label="View branding projects">View Projects →</a>
+        </article>
 
-        <div class="card">
+        <article class="card" role="listitem">
           <img src="assets/icons/packaging.webp" alt="Packaging icon" class="card-icon" />
           <h3>Packaging</h3>
-          <p>Packaging that connects on-shelf and online. I’ve created designs for Mattel, Kodak, and Daewoo, blending brand consistency with market impact.</p>
-          <a href="/pages/design.html#packaging">View Projects →</a>
-        </div>
+          <p>Packaging that connects on-shelf and online. I've created designs for Mattel, Kodak, and Daewoo, blending brand consistency with market impact.</p>
+          <a href="pages/Packaging.html" aria-label="View packaging projects">View Projects →</a>
+        </article>
 
-        <div class="card">
+        <article class="card" role="listitem">
           <img src="assets/icons/webdesign.webp" alt="Web design icon" class="card-icon" />
           <h3>Web Design & Development</h3>
           <p>From layout to launch, I design responsive websites that are both beautiful and optimized. SEO, UX, WordPress development, and performance are always at the core of my process.</p>
-          <a href="/pages/web.html">View Projects →</a>
-        </div>
+          <a href="pages/web.html" aria-label="View web design projects">View Projects →</a>
+        </article>
 
-        <div class="card card-horizontal card-wide">
+        <article class="card card-horizontal card-wide" role="listitem">
           <div class="icon-left">
             <img src="assets/icons/seo.webp" alt="SEO icon" />
           </div>
@@ -136,9 +145,9 @@
             <h3>Marketing & SEO</h3>
             <p>From strategy to execution, I design digital campaigns that boost visibility and engagement. I implement SEO techniques, manage Google Ads, and create optimized content for social media and web.</p>
             <p><strong>Skills:</strong> Keyword strategy, content optimization, Google Ads, digital storytelling</p>
-            <a href="/pages/marketing.html">View Projects →</a>
+            <a href="pages/marketing.html" aria-label="View marketing projects">View Projects →</a>
           </div>
-        </div>
+        </article>
       </div>
     </div>
   </section>
