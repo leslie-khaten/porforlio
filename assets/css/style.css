@@ -106,14 +106,44 @@ h1.elementor-heading-title {
   margin-top: var(--h1-margin-top) !important;
   margin-bottom: var(--h1-margin-bottom-desktop) !important;
   padding: var(--h1-padding-desktop) !important;
-  padding-left: 40px !important;
-  padding-right: 40px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 /* First paragraph in design page */
 .design-page > p:first-of-type {
-  padding-left: 40px !important;
-  padding-right: 40px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* Unified styles for all page headers */
+.packaging-page h1,
+.editorial-page h1,
+.video-page h1,
+.web-page h1,
+.marketing-page h1,
+.contact-page h1 {
+  font-family: var(--h1-font-family) !important;
+  font-size: var(--h1-size-desktop) !important;
+  font-weight: var(--h1-font-weight) !important;
+  line-height: var(--h1-line-height) !important;
+  letter-spacing: var(--h1-letter-spacing) !important;
+  margin-top: var(--h1-margin-top) !important;
+  margin-bottom: var(--h1-margin-bottom-desktop) !important;
+  padding: var(--h1-padding-desktop) !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/* First paragraph in all pages */
+.packaging-page > p:first-of-type,
+.editorial-page > p:first-of-type,
+.video-page > p:first-of-type,
+.web-page > p:first-of-type,
+.marketing-page > p:first-of-type,
+.contact-page > p:first-of-type {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 h2 {
@@ -137,6 +167,10 @@ p {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 15px;
+}
+
+.intro p:first-of-type {
+  margin-top: 0;
 }
 
 .button {
@@ -222,7 +256,7 @@ main {
 .intro h1 {
   font-size: 40px;
   line-height: 1.2;
-  margin: 0 0 24px 0;
+  margin: 0 0 15px 0;
   font-weight: normal;
 }
 
@@ -461,11 +495,11 @@ h2 .highlighted-heading {
 
 @media (max-width: 768px) {
   .card-icon {
-    width: 60px;
+    width: 90px;
   }
   
   .card-horizontal .icon-left img {
-    width: 60px;
+    width: 90px;
   }
 }
 
@@ -605,13 +639,34 @@ footer .button:hover {
   
   .design-page h1,
   .design h1 {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
   
   .design-page > p:first-of-type {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  /* Unified responsive styles for all page headers - Tablet */
+  .packaging-page h1,
+  .editorial-page h1,
+  .video-page h1,
+  .web-page h1,
+  .marketing-page h1,
+  .contact-page h1 {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  
+  .packaging-page > p:first-of-type,
+  .editorial-page > p:first-of-type,
+  .video-page > p:first-of-type,
+  .web-page > p:first-of-type,
+  .marketing-page > p:first-of-type,
+  .contact-page > p:first-of-type {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 }
 
@@ -631,11 +686,11 @@ footer .button:hover {
   }
   
   .packaging-section {
-    padding: 15px 10px;
+    padding: 20px 15px !important;
   }
   
   .kodak-section {
-    padding: 15px 10px;
+    padding: 20px 15px !important;
   }
   
   .carousel-wrapper {
@@ -754,13 +809,13 @@ footer .button:hover {
   
   .design-page h1,
   .design h1 {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
   
   .design-page > p:first-of-type {
-    padding-left: 30px !important;
-    padding-right: 30px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   h2 {
@@ -831,13 +886,34 @@ footer .button:hover {
   
   .design-page h1,
   .design h1 {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
   
   .design-page > p:first-of-type {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  /* Unified responsive styles for all page headers - Mobile */
+  .packaging-page h1,
+  .editorial-page h1,
+  .video-page h1,
+  .web-page h1,
+  .marketing-page h1,
+  .contact-page h1 {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  
+  .packaging-page > p:first-of-type,
+  .editorial-page > p:first-of-type,
+  .video-page > p:first-of-type,
+  .web-page > p:first-of-type,
+  .marketing-page > p:first-of-type,
+  .contact-page > p:first-of-type {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
   
   .experience-grid {
@@ -1125,8 +1201,9 @@ footer .button:hover {
 
 @media (max-width: 768px) {
   .branding-grid {
-    gap: 20px;
-    margin: 20px auto;
+    gap: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
@@ -1159,6 +1236,8 @@ footer .button:hover {
 @media (max-width: 768px) {
   .branding-item {
     flex-direction: column;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 }
 
@@ -1215,9 +1294,14 @@ footer .button:hover {
 
 .packaging-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-bottom: 30px;
+}
+
+/* Specific grid for Mattel section - 2 columns */
+.mattel-grid {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .packaging-grid img {
@@ -1303,13 +1387,49 @@ footer .button:hover {
 
 .packaging-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-top: 20px;
 }
 
+/* Specific grid for Mattel section - 2 columns (responsive) */
+.mattel-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Wine container - no grid, just flex layout */
+.wine-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+/* Wine layout - horizontal layout for single wine bottle */
+.wine-layout {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 100%;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.wine-layout .packaging-image {
+  flex: 0 0 50%;
+  order: 1;
+}
+
+.wine-layout .packaging-text {
+  flex: 0 0 50%;
+  order: 2;
+  padding-top: 20px;
+}
+
 .packaging-item img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -1821,13 +1941,19 @@ footer .button:hover {
   }
   
   .packaging-text {
-    padding: 15px 0;
+    padding: 15px 0 !important;
+    margin: 0 !important;
   }
   
   .packaging-text h3,
   .packaging-text h4 {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .packaging-text p {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
   }
   
   
@@ -1862,12 +1988,18 @@ footer .button:hover {
   }
   
   .branding-text {
-    padding: 15px 0;
+    padding: 15px 0 !important;
+    margin: 0 !important;
   }
   
   .branding-text h3 {
-    margin-top: 0;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .branding-text p {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
   }
   
   .catalog-grid {
@@ -2069,6 +2201,239 @@ footer {
   /* Reducir padding del footer en móvil */
   footer {
     padding: 10px 20px;
+  }
+  
+  /* Más espaciado entre secciones en móvil */
+  .connect-wrapper {
+    margin-top: 40px;
+    padding: 40px 0 20px;
+  }
+  
+  .skills {
+    margin-bottom: 30px;
+  }
+  
+  /* Packaging Mobile - Unified Padding and Margins */
+  .packaging-section,
+  .kodak-section {
+    padding: 20px 15px !important;
+    margin: 0 !important;
+  }
+  
+  /* All headings in packaging sections */
+  .packaging-section h2,
+  .kodak-section h2,
+  .packaging-section h3,
+  .kodak-section h3,
+  .packaging-section h4,
+  .kodak-section h4 {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All paragraphs in packaging sections */
+  .packaging-section p,
+  .kodak-section p {
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All packaging items */
+  .packaging-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All packaging text containers */
+  .packaging-text {
+    padding: 15px 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* All headings in packaging text */
+  .packaging-text h3,
+  .packaging-text h4 {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All paragraphs in packaging text */
+  .packaging-text p {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All packaging images */
+  .packaging-image {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .packaging-image img {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Wine container responsive */
+  .wine-container {
+    margin: 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Wine layout responsive - vertical on mobile */
+  .wine-layout {
+    flex-direction: column !important;
+    gap: 20px;
+    padding: 15px 0 !important;
+    margin: 0 !important;
+  }
+  
+  .wine-layout .packaging-image {
+    order: 1;
+    flex: none;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .wine-layout .packaging-text {
+    order: 2;
+    flex: none;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Reset all other margins and paddings in packaging sections */
+  .packaging-section *,
+  .kodak-section * {
+    box-sizing: border-box;
+  }
+  
+  /* Force consistent spacing for all packaging elements */
+  .packaging-grid {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 20px !important;
+  }
+  
+  .packaging-grid .packaging-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Ensure all text elements have consistent spacing */
+  .packaging-section h1,
+  .packaging-section h2,
+  .packaging-section h3,
+  .packaging-section h4,
+  .packaging-section h5,
+  .packaging-section h6 {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .kodak-section h1,
+  .kodak-section h2,
+  .kodak-section h3,
+  .kodak-section h4,
+  .kodak-section h5,
+  .kodak-section h6 {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Ensure all paragraphs have consistent spacing */
+  .packaging-section p:not(:last-child),
+  .kodak-section p:not(:last-child) {
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .packaging-section p:last-child,
+  .kodak-section p:last-child {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Branding Mobile - Unified Padding and Margins */
+  .design-page {
+    padding: 20px 15px !important;
+    margin: 0 !important;
+  }
+  
+  /* All headings in design sections */
+  .design-page h1,
+  .design-page h2,
+  .design-page h3,
+  .design-page h4,
+  .design-page h5,
+  .design-page h6 {
+    margin: 0 0 15px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All paragraphs in design sections */
+  .design-page p:not(:last-child) {
+    margin: 0 0 20px 0 !important;
+    padding: 0 !important;
+  }
+  
+  .design-page p:last-child {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All branding items */
+  .branding-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All branding text containers */
+  .branding-text {
+    padding: 15px 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* All headings in branding text */
+  .branding-text h3,
+  .branding-text h4 {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All paragraphs in branding text */
+  .branding-text p {
+    margin: 0 0 10px 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* All branding images */
+  .branding-image {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .branding-image img {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Force consistent spacing for all branding elements */
+  .branding-grid {
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 20px !important;
+  }
+  
+  .branding-grid .branding-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  /* Reset all other margins and paddings in design sections */
+  .design-page * {
+    box-sizing: border-box;
   }
 }
 
