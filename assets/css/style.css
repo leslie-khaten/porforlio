@@ -1891,13 +1891,30 @@ footer .button:hover {
 }
 
 
+.web-item {
+  display: flex;
+  flex-direction: column;
+}
+
 .web-item img {
     width: 100%;
     max-width: 280px;
     height: auto;
     display: block;
-  border-radius: 8px;
-   box-shadow: none !important;
+    border-radius: 8px;
+    box-shadow: none !important;
+    order: 1;
+}
+
+.web-item h2,
+.web-item h4 {
+  order: 2;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.web-item p {
+  order: 3;
 }
 
 
@@ -2066,13 +2083,13 @@ footer {
     }
 
     .web-section h2 {
-      font-size: 28px;
+      font-size: 24px;
       font-family: 'Futura Bk BT', sans-serif;
       margin: 0 0 20px 0;
     }
 
     .web-section p {
-      font-size: 16px;
+      font-size: 12px;
       margin-bottom: 40px;
       line-height: 1.6;
     }
@@ -2099,12 +2116,12 @@ footer {
 
     .web-item h4 a {
       color: #111;
-      font-size: 18px;
+      font-size: 14px;
       text-decoration: none;
       font-weight: bold;
     }
 
     .web-item p {
-      font-size: 14px;
+      font-size: 10px;
       color: #444;
     }
