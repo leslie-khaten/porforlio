@@ -6,10 +6,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!track || !slide) return;
 
-  const slideWidth = slide.offsetWidth + 20; // ancho + gap
   let position = 0;
+  let slideWidth = 0;
+
+  function updateSlideWidth() {
+    slideWidth = slide.offsetWidth + parseInt(getComputedStyle(track).gap || '20');
+  }
+
+  // Initialize slide width
+  updateSlideWidth();
+
+  // Update slide width on window resize
+  window.addEventListener('resize', updateSlideWidth);
 
   nextBtn?.addEventListener('click', () => {
+    updateSlideWidth();
     const maxScroll = track.scrollWidth - track.clientWidth;
     if (Math.abs(position) + slideWidth < maxScroll) {
       position -= slideWidth;
@@ -20,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   prevBtn?.addEventListener('click', () => {
+    updateSlideWidth();
     if (position + slideWidth <= 0) {
       position += slideWidth;
     } else {

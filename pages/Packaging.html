@@ -39,22 +39,42 @@
     const track = document.querySelector('.carousel-track');
     const next = document.querySelector('.carousel-btn.next');
     const prev = document.querySelector('.carousel-btn.prev');
+    const slide = document.querySelector('.carousel-item');
+
+    if (!track || !slide) return;
 
     let position = 0;
-    const slideWidth = 320; // ancho estimado (ajústalo según tu imagen + gap)
+    let slideWidth = 0;
 
-    next.addEventListener('click', () => {
-      if (position > -(track.scrollWidth - track.clientWidth)) {
+    function updateSlideWidth() {
+      slideWidth = slide.offsetWidth + parseInt(getComputedStyle(track).gap || '20');
+    }
+
+    // Initialize slide width
+    updateSlideWidth();
+
+    // Update slide width on window resize
+    window.addEventListener('resize', updateSlideWidth);
+
+    next?.addEventListener('click', () => {
+      updateSlideWidth();
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      if (Math.abs(position) + slideWidth < maxScroll) {
         position -= slideWidth;
-        track.style.transform = `translateX(${position}px)`;
+      } else {
+        position = -maxScroll;
       }
+      track.style.transform = `translateX(${position}px)`;
     });
 
-    prev.addEventListener('click', () => {
-      if (position < 0) {
+    prev?.addEventListener('click', () => {
+      updateSlideWidth();
+      if (position + slideWidth <= 0) {
         position += slideWidth;
-        track.style.transform = `translateX(${position}px)`;
+      } else {
+        position = 0;
       }
+      track.style.transform = `translateX(${position}px)`;
     });
   });
 </script>
