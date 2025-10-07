@@ -1058,21 +1058,9 @@ footer .button:hover {
     padding: 10px 0;
   }
   
-  /* Efecto alternado también para branding items en pantallas muy pequeñas */
-  .branding-item:nth-child(odd) {
+  /* Consistent layout: image above, text below */
+  .branding-item {
     flex-direction: column;
-  }
-  
-  .branding-item:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-  
-  .branding-item:nth-child(even) .branding-image {
-    order: 1;
-  }
-  
-  .branding-item:nth-child(even) .branding-text {
-    order: 2;
   }
   
   .branding-text {
@@ -1192,8 +1180,8 @@ footer .button:hover {
 /* design */
 .branding-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 0 20px;
@@ -1201,17 +1189,19 @@ footer .button:hover {
 
 @media (max-width: 768px) {
   .branding-grid {
-    gap: 20px !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px !important;
+    margin: 20px auto !important;
+    padding: 0 20px !important;
   }
 }
 
 .branding-item {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .branding-text h3 {
@@ -1962,30 +1952,29 @@ footer .button:hover {
     gap: 20px;
   }
   
-  /* Efecto alternado para branding items en responsive */
-  .branding-item:nth-child(odd) {
+  .branding-item {
+    text-align: left;
+  }
+  
+  /* Consistent layout: image above, text below */
+  .branding-item {
     flex-direction: column;
   }
   
-  .branding-item:nth-child(even) {
-    flex-direction: column-reverse;
-  }
-  
-  .branding-item:nth-child(even) .branding-image {
-    order: 1;
-  }
-  
-  .branding-item:nth-child(even) .branding-text {
-    order: 2;
-  }
-  
   /* Asegurar que las imágenes se vean bien */
-  .branding-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
+.branding-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branding-image img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
   
   .branding-text {
     padding: 15px 0 !important;
@@ -2490,3 +2479,205 @@ footer {
       font-size: 10px;
       color: #444;
     }
+}
+
+/* ========================================
+   VIDEO GALLERY SECTION
+======================================== */
+
+.video-gallery {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+}
+
+.video-gallery-content h2 {
+  font-size: 32px;
+  color: #312579;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.video-gallery-content p {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Vertical Videos Grid (Instagram Reels) */
+.vertical-videos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 40px auto;
+  max-width: 1000px;
+  justify-items: center;
+}
+
+/* Horizontal Videos Grid */
+.horizontal-videos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 40px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* Remove shadow from horizontal video */
+.horizontal-videos-grid .video-item {
+  box-shadow: none;
+  width: 100%;
+}
+
+/* Make horizontal video player taller */
+.horizontal-videos-grid .video-player {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.video-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Vertical video styles */
+.vertical-video {
+  box-shadow: none;
+  max-width: 250px;
+}
+
+.video-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Remove hover effect from vertical videos */
+.vertical-video:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+/* Remove hover effect from horizontal video */
+.horizontal-videos-grid .video-item:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.video-player {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Vertical videos (Instagram Reels format) */
+.vertical-video .video-player {
+  height: 400px;
+  width: 225px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+.video-item h3 {
+  font-size: 18px;
+  color: #312579;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Responsive Design for Video Gallery */
+@media (max-width: 768px) {
+  .video-gallery {
+    padding: 40px 15px;
+  }
+  
+  .video-gallery-content h2 {
+    font-size: 28px;
+  }
+  
+  .video-gallery-content p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  
+  .vertical-videos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px auto;
+  }
+  
+  .horizontal-videos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  
+  .horizontal-videos-grid .video-player {
+    height: 350px;
+  }
+  
+  .video-player {
+    height: 180px;
+  }
+  
+  /* Vertical videos on tablet */
+  .vertical-video .video-player {
+    height: 350px;
+    width: 200px;
+  }
+  
+  .video-item h3 {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-gallery {
+    padding: 30px 10px;
+  }
+  
+  .video-gallery-content h2 {
+    font-size: 24px;
+  }
+  
+  .video-player {
+    height: 160px;
+  }
+  
+  /* Vertical videos on mobile */
+  .vertical-video .video-player {
+    height: 300px;
+    width: 170px;
+  }
+  
+  .vertical-videos-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin: 30px auto;
+  }
+  
+  .horizontal-videos-grid {
+    padding: 0 10px;
+  }
+  
+  .horizontal-videos-grid .video-player {
+    height: 300px;
+  }
+}
