@@ -341,7 +341,7 @@ h2 .highlighted-heading {
 }
 
 .experience-header h2 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: normal;
   margin: 0 0 20px 0;
 }
@@ -363,15 +363,11 @@ h2 .highlighted-heading {
   gap: 40px 30px;
 }
 
-.job .date {
-  font-size: 14px;
-  color: #777;
-  margin-bottom: 6px;
-}
-
 .job p {
-  font-size: 15px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin: 0;
 }
 
 /* ========================================
@@ -410,7 +406,7 @@ h2 .highlighted-heading {
 
 .skills-description {
   flex: 2;
-  font-size: 15px;
+  font-size: 16px;
   color: #444;
   line-height: 1.6;
   padding-left: 10px;
@@ -504,12 +500,6 @@ h2 .highlighted-heading {
   border-bottom: none;
 }
 
-.experience-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
 .job {
   background-color: #fff;
   border-radius: 10px;
@@ -524,7 +514,7 @@ h2 .highlighted-heading {
 
 .job .date {
   font-size: 14px;
-  color: #999;
+  color: #777;
   margin-bottom: 6px;
   display: block;
 }
@@ -538,23 +528,15 @@ h2 .highlighted-heading {
 }
 
 .job strong a {
-  color: #312579;
+  color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: none;
 }
 
 .job strong a:hover {
-  color: #683399;
-  text-decoration: underline;
+  color: inherit;
+  text-decoration: none;
 }
-
-.job p {
-  font-size: 14px;
-  line-height: 1.5;
-  color: #444;
-  margin: 0;
-}
-
 
 .card {
   background-color: white;
@@ -685,12 +667,6 @@ h2 .highlighted-heading {
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
-}
-
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px 30px;
 }
 
 /* Footer */
@@ -1031,6 +1007,11 @@ footer .button:hover {
     grid-template-columns: 1fr;
   }
   
+  .web-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
   body {
     padding-top: 150px;
   }
@@ -1327,9 +1308,9 @@ footer .button:hover {
 }
 
 .branding-text p {
-  font-size: 15px;
+  font-size: 16px;
   color: #333;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .branding-image img {
@@ -1355,9 +1336,14 @@ footer .button:hover {
   box-sizing: border-box;
 }
 
-.packaging-section h2 {
+.packaging-section h2,
+.kodak-section h2,
+.editorial-design h2,
+.video-text h2,
+.contact-text h2 {
   font-size: 28px;
   margin: 0 0 20px 0;
+  font-family: 'Futura Bk BT', sans-serif;
 }
 
 .packaging-section h3 {
@@ -1366,8 +1352,9 @@ footer .button:hover {
   color: #312579;
 }
 
-.packaging-section p {
-  font-size: 15px;
+.packaging-section p,
+.kodak-section p {
+  font-size: 16px;
   color: #555;
   margin-bottom: 15px;
 }
@@ -1380,22 +1367,11 @@ footer .button:hover {
   box-sizing: border-box;
 }
 
-.kodak-section h2 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-  color: #222;
-}
 
 .kodak-section h3 {
   font-size: 22px;
   margin: 0 0 16px 0;
   color: #312579;
-}
-
-.kodak-section p {
-  font-size: 15px;
-  color: #555;
-  margin-bottom: 15px;
 }
 
 .packaging-grid {
@@ -1445,9 +1421,10 @@ footer .button:hover {
 }
 
 .packaging-item p {
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.6;
   color: #555;
-  line-height: 1.5;
+  margin: 0;
 }
 
 /* Clases para efecto reverse en responsive */
@@ -1542,12 +1519,6 @@ footer .button:hover {
   margin-bottom: 10px;
 }
 
-.packaging-item p {
-  font-size: 15px;
-  line-height: 1.5;
-  color: #333;
-}
-
 .facial-masks-section {
   display: flex;
   flex-direction: column;
@@ -1595,9 +1566,10 @@ footer .button:hover {
 }
 
 .facial-mask-text p {
-  font-size: 15px;
-  color: #444;
+  font-size: 16px;
   line-height: 1.6;
+  color: #444;
+  margin: 0;
 }
 
 .facial-mask-item img {
@@ -1658,12 +1630,6 @@ footer .button:hover {
   font-size: 16px;
   display: block;
   color: #666;
-}
-
-.facial-mask-text p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
 }
 
 .carousel-wrapper {
@@ -1756,10 +1722,6 @@ footer .button:hover {
   margin: 0 auto;
 }
 
-.editorial-design h2 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-}
 
 .editorial-design p {
   margin-bottom: 40px;
@@ -1996,12 +1958,6 @@ footer .button:hover {
   align-items: center;
 }
 
-.video-text h2 {
-  font-family: 'Futura Bk BT', sans-serif;
-  font-size: 28px;
-  margin: 0 0 20px 0;
-  color: #111;
-}
 
 .video-text .highlighted-heading {
   font-size: 22px;
@@ -2156,7 +2112,7 @@ footer .button:hover {
   }
   
   .web-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
   
@@ -2170,6 +2126,13 @@ footer .button:hover {
   }
 }
 
+
+.web-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
 
 .web-item {
   display: flex;
@@ -2190,6 +2153,18 @@ footer .button:hover {
   order: 2;
   margin-top: 15px;
   margin-bottom: 10px;
+}
+
+.web-item h2 a,
+.web-section h2 a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.web-item h2 a:hover,
+.web-section h2 a:hover {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
 .web-item p {
@@ -2278,10 +2253,6 @@ body {
   min-width: 300px;
 }
 
-.contact-text h2 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-}
 
 .contact-text p {
   margin-bottom: 20px;
@@ -2584,26 +2555,25 @@ footer {
   .design-page * {
     box-sizing: border-box;
   }
-}
-
   .web-section {
-      padding: 80px 20px;
-      background-color: #fff;
-    }
+    padding: 80px 20px;
+    background-color: #fff;
+  }
 
-    .web-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+  .web-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
     .web-section h2 {
-      font-size: 24px;
+      font-size: 28px;
       font-family: 'Futura Bk BT', sans-serif;
       margin: 0 0 20px 0;
     }
+    
 
     .web-section p {
-      font-size: 12px;
+      font-size: 16px;
       margin-bottom: 40px;
       line-height: 1.6;
     }
@@ -2627,6 +2597,7 @@ footer {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
 
+    .web-item h2 a,
     .web-item h4 a {
       color: #111;
       font-size: 14px;
@@ -2635,7 +2606,7 @@ footer {
     }
 
     .web-item p {
-      font-size: 10px;
+      font-size: 16px;
       color: #444;
     }
 }
@@ -2769,7 +2740,7 @@ footer {
   }
   
   .video-gallery-content p {
-    font-size: 14px;
+    font-size: 16px;
     margin-bottom: 30px;
   }
   
