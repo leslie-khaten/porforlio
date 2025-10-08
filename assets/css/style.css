@@ -47,6 +47,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   overflow-x: hidden;
   width: 100%;
@@ -225,7 +226,7 @@ nav a {
 }
 
 nav a.button {
-  background-color: #683399;
+  background-color: #32cd32;
   color: #fff;
   padding: 6px 14px;
   border-radius: 20px;
@@ -284,7 +285,7 @@ h2 .highlighted-heading {
 }
 
 .intro .button {
-  background-color: #6a3497;
+  background-color: #32cd32;
   color: white;
   padding: 10px 26px;
   border-radius: 30px;
@@ -648,7 +649,7 @@ h2 .highlighted-heading {
 }
 
 .connect-button .button {
-  background-color: #683399;
+  background-color: #32cd32;
   color: white;
   padding: 10px 24px;
   border-radius: 20px;
@@ -677,7 +678,7 @@ footer {
 }
 
 footer .button {
-  background-color: #683399;
+  background-color: #32cd32;
   color: white;
   padding: 10px 20px;
   border-radius: 20px;
@@ -688,7 +689,7 @@ footer .button {
 }
 
 footer .button:hover {
-  background-color: #5a2d7a;
+  background-color: #228b22;
 }
 
 /* Tablet H1 Styles */
@@ -1973,7 +1974,7 @@ footer .button:hover {
 
 .video-text .button {
   display: inline-block;
-  background-color: #5b2972;
+  background-color: #32cd32;
   color: #fff;
   padding: 10px 20px;
   border-radius: 30px;
@@ -1984,7 +1985,7 @@ footer .button:hover {
 }
 
 .video-text .button:hover {
-  background-color: #312579;
+  background-color: #228b22;
 }
 
 .video-wrapper {
@@ -2189,7 +2190,7 @@ ul.custom-bullets li {
 
 .button {
   display: inline-block;
-  background-color: #312579;
+  background-color: #32cd32;
   color: #fff;
   padding: 10px 20px;
   font-weight: bold;
@@ -2199,7 +2200,7 @@ ul.custom-bullets li {
 }
 
 .button:hover {
-  background-color: #312579;
+  background-color: #228b22;
 }
 
 
@@ -2245,7 +2246,7 @@ body {
 
 .contact-text .button {
   display: inline-block;
-  background-color: #683399;
+  background-color: #32cd32;
   color: white;
   padding: 12px 20px;
   border-radius: 25px;
@@ -2256,8 +2257,7 @@ body {
 }
 
 .contact-text .button:hover {
-  background-color:#312579;
-;
+  background-color: #228b22;
 }
 
 .contact-photo {
