@@ -413,8 +413,21 @@ h2 .highlighted-heading {
 
 .skill-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+}
+
+.skill-cards .card:nth-child(4),
+.skill-cards .card:nth-child(5) {
+  grid-column: span 1;
+}
+
+.skill-cards .card:nth-child(4) {
+  grid-column: 1;
+}
+
+.skill-cards .card:nth-child(5) {
+  grid-column: 2;
 }
 
 /* Tools Section */
@@ -813,6 +826,11 @@ footer .button:hover {
   .skill-cards,
   .tools-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .skill-cards .card:nth-child(4),
+  .skill-cards .card:nth-child(5) {
+    grid-column: span 1;
   }
 
   .connect-button {
