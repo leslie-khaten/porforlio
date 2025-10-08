@@ -537,6 +537,17 @@ h2 .highlighted-heading {
   font-size: 16px;
 }
 
+.job strong a {
+  color: #312579;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.job strong a:hover {
+  color: #683399;
+  text-decoration: underline;
+}
+
 .job p {
   font-size: 14px;
   line-height: 1.5;
