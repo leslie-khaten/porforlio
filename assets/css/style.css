@@ -579,7 +579,7 @@ h2 .highlighted-heading {
 }
 
 .card-horizontal .icon-left img {
-  
+  width: 80px;
   height: auto;
   margin-top: 6px;
 }
