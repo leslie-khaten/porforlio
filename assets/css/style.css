@@ -156,6 +156,10 @@ h2 {
   margin: 0 0 20px 0;
 }
 
+.about-text h2 {
+  margin-top: -37px !important;
+}
+
 h3 {
   font-family: 'Futura Bk BT', sans-serif;
   font-size: 22px;
@@ -308,6 +312,7 @@ h2 .highlighted-heading {
   grid-template-columns: 1fr 320px;
   align-items: start;
   gap: 40px;
+  margin-top: 46px;
   margin-bottom: 60px;
 }
 
@@ -762,7 +767,7 @@ footer .button:hover {
   
   main {
     margin-top: 50px;
-    padding: 15px 10px;
+    padding: 20px 15px;
   }
   
   .packaging-section {
@@ -798,7 +803,7 @@ footer .button:hover {
   .experience,
   .intro,
   .about {
-    padding: 0 20px;
+    padding: 0 15px;
     flex-direction: column;
     align-items: flex-start;
   }
@@ -812,6 +817,7 @@ footer .button:hover {
 
   .about {
     grid-template-columns: 1fr;
+    margin-top: 0;
   }
 
   .about-photo img {
@@ -880,7 +886,7 @@ footer .button:hover {
     gap: 10px;
   }
 
-  /* Tablet H1 Styles */
+  /* Tablet H1 Styles - Ensure h1 is visible */
   h1,
   .elementor-heading-title,
   .elementor-heading-title h1,
@@ -890,8 +896,12 @@ footer .button:hover {
   .design-page h1,
   .design h1 {
     font-size: var(--h1-size-tablet) !important;
+    margin-top: 35px !important;
     margin-bottom: var(--h1-margin-bottom-tablet) !important;
     padding: var(--h1-padding-tablet) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   .design-page h1,
@@ -957,7 +967,7 @@ footer .button:hover {
 }
 
 @media (max-width: 480px) {
-  /* Mobile H1 Styles */
+  /* Mobile H1 Styles - Ensure h1 is visible */
   h1,
   .elementor-heading-title,
   .elementor-heading-title h1,
@@ -967,8 +977,12 @@ footer .button:hover {
   .design-page h1,
   .design h1 {
     font-size: var(--h1-size-mobile) !important;
+    margin-top: 45px !important;
     margin-bottom: var(--h1-margin-bottom-mobile) !important;
     padding: var(--h1-padding-mobile) !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   .design-page h1,
@@ -1017,7 +1031,7 @@ footer .button:hover {
   }
   
   header {
-    padding: 10px 15px;
+    padding: 15px 20px;
   }
   
   .header-container {
@@ -1041,16 +1055,16 @@ footer .button:hover {
   }
   
   .packaging-section {
-    padding: 15px 10px;
+    padding: 20px 15px;
   }
   
   .kodak-section {
-    padding: 15px 10px;
+    padding: 20px 15px;
   }
   
   .carousel-wrapper {
     margin: 30px 0;
-    padding: 0 15px;
+    padding: 0 20px;
   }
   
   .carousel-container {
@@ -1268,6 +1282,7 @@ footer .button:hover {
     
         font-size: 22px;
         line-height: 41px;
+        margin-top: -37px !important;
     
     }
 }
@@ -2137,6 +2152,7 @@ footer .button:hover {
 .web-item {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .web-item img {
@@ -2146,6 +2162,7 @@ footer .button:hover {
     display: block;
     box-shadow: none !important;
     order: 1;
+    margin: 0 auto;
 }
 
 .web-item h2,
