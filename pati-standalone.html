@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Patricia Fierro — Diseñadora Gráfica y Web con más de 14 años de experiencia en branding, contenido digital y diseño editorial. Buenos Aires, Argentina." />
+  <meta name="author" content="Patricia Fierro" />
+  <title>Patricia Fierro — Graphic & Web Designer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+/* =========================================
+   Patricia Fierro — Portfolio
+   ========================================= */
+
+:root {
+  --cream:   #f4efe6;
+  --cream2:  #ede5d8;
+  --dark:    #19160f;
+  --dark2:   #2a2419;
+  --amber:   #c07b3c;
+  --amber-l: #d9a067;
+  --taupe:   #9a8b78;
+  --border:  #ddd4c4;
+  --white:   #fdfaf5;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  --ease: cubic-bezier(.4,0,.2,1);
+  --transition: 0.35s var(--ease);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ── TYPOGRAPHY ── */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ─────────────────────────────────────────
+   NAV
+───────────────────────────────────────── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 4rem;
+  background: transparent;
+  transition: background var(--transition), box-shadow var(--transition);
+}
+
+nav.scrolled {
+  background: rgba(244,239,230,.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--white);
+  transition: color var(--transition);
+}
+
+nav.scrolled .nav-logo { color: var(--dark); }
+
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(253,250,245,.7);
+  transition: color var(--transition);
+}
+
+nav.scrolled .nav-links a { color: var(--taupe); }
+.nav-links a:hover { color: var(--amber) !important; }
+
+.nav-cta {
+  font-size: .78rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .6rem 1.4rem;
+  border: 1px solid rgba(253,250,245,.4);
+  border-radius: 2rem;
+  color: var(--white) !important;
+  transition: background var(--transition), border-color var(--transition), color var(--transition) !important;
+}
+
+nav.scrolled .nav-cta {
+  border-color: var(--amber);
+  color: var(--amber) !important;
+}
+
+.nav-cta:hover {
+  background: var(--amber) !important;
+  border-color: var(--amber) !important;
+  color: var(--white) !important;
+}
+
+/* hamburger mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.nav-toggle span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--white);
+  transition: background var(--transition);
+}
+nav.scrolled .nav-toggle span { background: var(--dark); }
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background: var(--dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 4rem 6rem;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 75% 40%, rgba(192,123,60,.12) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 20% 70%, rgba(192,123,60,.07) 0%, transparent 60%);
+}
+
+.hero-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.hero-label {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1.4rem;
+}
+
+.hero-name {
+  font-size: clamp(4.5rem, 10vw, 10rem);
+  font-weight: 300;
+  color: var(--white);
+  letter-spacing: -.02em;
+  line-height: 1;
+  margin-bottom: .5rem;
+}
+
+.hero-name em {
+  font-style: italic;
+  color: var(--amber-l);
+}
+
+.hero-title {
+  font-family: var(--font-body);
+  font-size: clamp(.9rem, 1.4vw, 1.1rem);
+  font-weight: 300;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: rgba(253,250,245,.5);
+  margin-bottom: 3rem;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-loc {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: rgba(253,250,245,.45);
+  font-size: .82rem;
+  letter-spacing: .06em;
+}
+
+.hero-loc svg { color: var(--amber); flex-shrink: 0; }
+
+.hero-scroll {
+  position: absolute;
+  right: 4rem;
+  bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .7rem;
+  color: rgba(253,250,245,.3);
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(253,250,245,.3), transparent);
+  animation: scrollPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: .3; transform: scaleY(1); }
+  50% { opacity: .8; transform: scaleY(1.1); }
+}
+
+/* ─────────────────────────────────────────
+   SECTION SHARED
+───────────────────────────────────────── */
+section { padding: 6rem 4rem; }
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 1rem;
+}
+
+.section-tag::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--amber);
+}
+
+.section-heading {
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* ─────────────────────────────────────────
+   ABOUT
+───────────────────────────────────────── */
+.about {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 6rem;
+  align-items: start;
+}
+
+.about-left {}
+
+.about-lead {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 300;
+  line-height: 1.4;
+  color: var(--dark);
+  margin: 2rem 0 1.8rem;
+}
+
+.about-body {
+  color: var(--taupe);
+  font-size: .95rem;
+  line-height: 1.8;
+  max-width: 48ch;
+}
+
+.about-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.fact-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border-top: 1px solid var(--border);
+  padding: 1.4rem 0;
+}
+
+.fact-row:last-child { border-bottom: 1px solid var(--border); }
+
+.fact-label {
+  font-size: .7rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.fact-value {
+  font-size: .92rem;
+  color: var(--dark);
+}
+
+.fact-value span {
+  display: block;
+  color: var(--taupe);
+  font-size: .82rem;
+  margin-top: .15rem;
+}
+
+/* ─────────────────────────────────────────
+   EXPERIENCE
+───────────────────────────────────────── */
+.experience {
+  background: var(--cream);
+  max-width: 100%;
+}
+
+.experience-inner {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.experience-sticky {
+  position: sticky;
+  top: 7rem;
+}
+
+.experience-intro {
+  color: var(--taupe);
+  font-size: .9rem;
+  line-height: 1.75;
+  margin-top: 1.5rem;
+  max-width: 28ch;
+}
+
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: var(--border);
+}
+
+.job {
+  position: relative;
+  padding: 0 0 2.5rem 2.2rem;
+  border: none;
+}
+
+.job:last-child { padding-bottom: 0; }
+
+.job::before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 12px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1.5px solid var(--border);
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.job:hover::before {
+  border-color: var(--amber);
+  background: var(--amber);
+}
+
+.job-date {
+  font-size: .7rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: .5rem;
+}
+
+.job-company {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: .15rem;
+}
+
+.job-role {
+  font-size: .82rem;
+  color: var(--taupe);
+  letter-spacing: .04em;
+  margin-bottom: .3rem;
+}
+
+.job-location {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .72rem;
+  color: var(--taupe);
+  margin-bottom: .8rem;
+}
+
+.job-desc {
+  font-size: .88rem;
+  color: var(--taupe);
+  line-height: 1.7;
+  max-width: 52ch;
+}
+
+.job-desc li {
+  list-style: none;
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: .2rem;
+}
+
+.job-desc li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+  font-size: .75rem;
+}
+
+/* ─────────────────────────────────────────
+   SKILLS
+───────────────────────────────────────── */
+.skills {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.skills .section-heading { color: var(--white); }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  margin-top: 4rem;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+.skill-card {
+  background: var(--dark);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: background var(--transition);
+}
+
+.skill-card:hover { background: var(--dark2); }
+
+.skill-icon {
+  width: 48px;
+  height: 48px;
+  color: var(--amber);
+}
+
+.skill-card-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.skill-list li {
+  font-size: .84rem;
+  color: rgba(253,250,245,.5);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  transition: color var(--transition);
+}
+
+.skill-list li:hover { color: rgba(253,250,245,.9); }
+
+.skill-list li::before {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--amber);
+  flex-shrink: 0;
+  opacity: .6;
+}
+
+/* ─────────────────────────────────────────
+   EDUCATION
+───────────────────────────────────────── */
+.education {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 6rem;
+  align-items: center;
+}
+
+.edu-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 260px;
+}
+
+.edu-circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+.edu-circle:nth-child(1) { width: 260px; height: 260px; }
+.edu-circle:nth-child(2) { width: 190px; height: 190px; border-style: dashed; }
+.edu-circle:nth-child(3) { width: 120px; height: 120px; background: var(--cream2); }
+
+.edu-inner-text {
+  position: relative;
+  text-align: center;
+}
+
+.edu-inner-text .year {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--amber);
+  line-height: 1;
+}
+
+.edu-inner-text .label {
+  font-size: .65rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  margin-top: .25rem;
+}
+
+.edu-detail {
+  margin-top: 2rem;
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--dark);
+  margin-bottom: .5rem;
+}
+
+.edu-school {
+  color: var(--amber);
+  font-size: .85rem;
+  letter-spacing: .06em;
+  margin-bottom: .3rem;
+}
+
+.edu-place {
+  color: var(--taupe);
+  font-size: .82rem;
+}
+
+.edu-langs {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lang-row {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.lang-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.lang-name {
+  font-size: .9rem;
+  color: var(--dark);
+  font-weight: 500;
+}
+
+.lang-level {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.lang-bar {
+  height: 2px;
+  background: var(--border);
+  border-radius: 1px;
+  overflow: hidden;
+}
+
+.lang-fill {
+  height: 100%;
+  background: var(--amber);
+  border-radius: 1px;
+}
+
+/* ─────────────────────────────────────────
+   CONTACT
+───────────────────────────────────────── */
+.contact {
+  background: var(--dark2);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem 8rem;
+  align-items: center;
+}
+
+.contact .section-heading { color: var(--white); }
+
+.contact-tagline {
+  color: rgba(253,250,245,.45);
+  font-size: .95rem;
+  line-height: 1.8;
+  margin-top: 1.2rem;
+  max-width: 36ch;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: .5rem;
+  background: rgba(255,255,255,.03);
+  transition: border-color var(--transition), background var(--transition);
+  cursor: default;
+}
+
+.contact-item:hover {
+  border-color: rgba(192,123,60,.4);
+  background: rgba(192,123,60,.05);
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  color: var(--amber);
+  flex-shrink: 0;
+}
+
+.contact-item-label {
+  font-size: .68rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(253,250,245,.35);
+  margin-bottom: .15rem;
+}
+
+.contact-item-value {
+  font-size: .9rem;
+  color: rgba(253,250,245,.8);
+}
+
+/* ─────────────────────────────────────────
+   FOOTER
+───────────────────────────────────────── */
+footer {
+  background: var(--dark);
+  padding: 2rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: rgba(253,250,245,.5);
+}
+
+.footer-copy {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  color: rgba(253,250,245,.25);
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .experience-inner { grid-template-columns: 1fr; }
+  .experience-sticky { position: static; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .education { grid-template-columns: 1fr; }
+  .edu-visual { display: none; }
+  .contact { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+@media (max-width: 768px) {
+  nav { padding: 1.2rem 1.8rem; }
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--dark);
+    padding: 1.5rem 2rem 2rem;
+    gap: 1.2rem;
+  }
+  .nav-toggle { display: flex; }
+  nav.scrolled .nav-links { background: rgba(244,239,230,.97); }
+
+  .hero { padding: 0 1.8rem 5rem; }
+  .hero-scroll { right: 1.8rem; display: none; }
+
+  section { padding: 4rem 1.8rem; }
+
+  .about { grid-template-columns: 1fr; gap: 2.5rem; }
+  .fact-row { grid-template-columns: 120px 1fr; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+
+  .contact { grid-template-columns: 1fr; }
+
+  footer { padding: 1.6rem 1.8rem; flex-direction: column; gap: .5rem; text-align: center; }
+}
+
+/* ─────────────────────────────────────────
+   ANIMATIONS (on scroll via IntersectionObserver)
+───────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s var(--ease), transform .6s var(--ease);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.fade-up:nth-child(2) { transition-delay: .1s; }
+.fade-up:nth-child(3) { transition-delay: .2s; }
+.fade-up:nth-child(4) { transition-delay: .3s; }
+.fade-up:nth-child(5) { transition-delay: .4s; }
+
+</style>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAV
+  ═══════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">PF</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">Sobre mí</a></li>
+      <li><a href="#experience">Experiencia</a></li>
+      <li><a href="#skills">Habilidades</a></li>
+      <li><a href="#education">Formación</a></li>
+      <li><a href="#contact" class="nav-cta">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-lines"></div>
+
+    <span class="hero-label">Portfolio — Graphic &amp; Web Designer</span>
+
+    <h1 class="hero-name">
+      Patricia<br><em>Fierro</em>
+    </h1>
+
+    <p class="hero-title">Diseño que comunica &nbsp;·&nbsp; Identidad que conecta &nbsp;·&nbsp; Presencia que impacta</p>
+
+    <div class="hero-meta">
+      <span class="hero-loc">
+        <!-- PIN icon -->
+        <svg class="hero-loc-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        Buenos Aires, Argentina
+      </span>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-left">
+      <span class="section-tag">Sobre mí</span>
+      <p class="about-lead">
+        Diseñadora digital con más de 14 años creando piezas que hablan por las marcas.
+      </p>
+      <p class="about-body">
+        Mi trabajo vive en la intersección entre creatividad y estrategia. Desde branding y diseño editorial hasta contenido para redes y soporte en web, llevo cada proyecto con atención al detalle y foco en la experiencia del usuario.
+        <br><br>
+        Trabajé para clientes en Argentina, Venezuela y mercados internacionales, adaptándome a distintas culturas visuales y entornos de trabajo remoto. Inglés avanzado, mente versátil, resultado siempre cuidado.
+      </p>
+    </div>
+
+    <div class="about-right">
+      <div class="fact-row fade-up">
+        <span class="fact-label">Ubicación</span>
+        <span class="fact-value">Buenos Aires, Argentina</span>
+      </div>
+      <div class="fact-row fade-up">
+        <span class="fact-label">Disponibilidad</span>
+        <span class="fact-value">Remoto &amp; Freelance</span>
+      </div>
+      <div class="fact-row fade-up">
+        <span class="fact-label">Idiomas</span>
+        <span class="fact-value">
+          Español — Nativo (C2)
+          <span>English — Upper Intermediate (B2)</span>
+        </span>
+      </div>
+      <div class="fact-row fade-up">
+        <span class="fact-label">Experiencia</span>
+        <span class="fact-value">+14 años</span>
+      </div>
+      <div class="fact-row fade-up">
+        <span class="fact-label">Email</span>
+        <span class="fact-value">pjfb2101@gmail.com</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EXPERIENCE
+  ═══════════════════════════════════════ -->
+  <section class="experience" id="experience">
+    <div class="experience-inner">
+
+      <div class="experience-sticky">
+        <span class="section-tag">Trayectoria</span>
+        <h2 class="section-heading">Experiencia<br>profesional</h2>
+        <p class="experience-intro">
+          Más de una década acompañando marcas en Argentina, Venezuela y el mercado global.
+        </p>
+      </div>
+
+      <div class="timeline">
+
+        <article class="job fade-up">
+          <p class="job-date">2024 — Presente</p>
+          <h3 class="job-company">Neonom Digital Solutions</h3>
+          <p class="job-role">Graphic &amp; Digital Designer</p>
+          <span class="job-location">
+            <!-- globe icon -->
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10A15.3 15.3 0 0 1 8 12a15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Remoto
+          </span>
+          <ul class="job-desc">
+            <li>Diseño de assets visuales para branding, presentaciones y comunicación digital en mercados internacionales.</li>
+            <li>Contenido para redes sociales y materiales de marketing bilingüe.</li>
+            <li>Materiales corporativos y editoriales para campañas de crecimiento de negocio.</li>
+            <li>Colaboración en experiencias digitales en Webflow con foco en UX y consistencia visual.</li>
+          </ul>
+        </article>
+
+        <article class="job fade-up">
+          <p class="job-date">2017 — 2024</p>
+          <h3 class="job-company">Delta E Publicidad</h3>
+          <p class="job-role">Graphic Designer / Digital Content Designer</p>
+          <span class="job-location">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Buenos Aires, Argentina
+          </span>
+          <ul class="job-desc">
+            <li>Diseño de materiales publicitarios para medios impresos y digitales.</li>
+            <li>Contenido visual para campañas en redes sociales y comunicación de marca.</li>
+            <li>Desarrollo de assets de branding y materiales gráficos para múltiples clientes.</li>
+            <li>Coordinación de flujos de producción y supervisión de entregables.</li>
+          </ul>
+        </article>
+
+        <article class="job fade-up">
+          <p class="job-date">Abril 2014 — Marzo 2015</p>
+          <h3 class="job-company">Exactos, C.A.</h3>
+          <p class="job-role">Graphic Designer / Graphic Design Coordination</p>
+          <span class="job-location">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Nueva Esparta, Venezuela
+          </span>
+          <ul class="job-desc">
+            <li>Diseño de materiales publicitarios para medios impresos y digitales.</li>
+            <li>Coordinación de procesos de producción para campañas gráficas.</li>
+            <li>Supervisión de flujos de trabajo y organización del área de diseño.</li>
+          </ul>
+        </article>
+
+        <article class="job fade-up">
+          <p class="job-date">Junio 2011 — Marzo 2014</p>
+          <h3 class="job-company">Publioriente, C.A.</h3>
+          <p class="job-role">Graphic Designer / Graphic Design Coordination</p>
+          <span class="job-location">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Nueva Esparta, Venezuela
+          </span>
+          <ul class="job-desc">
+            <li>Diseño de piezas publicitarias para múltiples clientes y campañas.</li>
+            <li>Supervisión de procesos de producción e impresión en gran formato.</li>
+            <li>Coordinación de equipo de diseño gráfico y flujos de producción creativa.</li>
+          </ul>
+        </article>
+
+        <article class="job fade-up">
+          <p class="job-date">Enero 2011 — Junio 2011</p>
+          <h3 class="job-company">Negocios24, C.A.</h3>
+          <p class="job-role">Design Coordinator</p>
+          <span class="job-location">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Nueva Esparta, Venezuela
+          </span>
+          <ul class="job-desc">
+            <li>Desarrollo de imagen de marca y layouts publicitarios.</li>
+            <li>Planificación y diseño de espacios publicitarios para publicaciones impresas semanales.</li>
+            <li>Maquetación de periódico y creación de banners web.</li>
+          </ul>
+        </article>
+
+        <article class="job fade-up">
+          <p class="job-date">Septiembre 2010 — Junio 2011</p>
+          <h3 class="job-company">New Com Producciones</h3>
+          <p class="job-role">Graphic Designer</p>
+          <span class="job-location">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Nueva Esparta, Venezuela
+          </span>
+          <ul class="job-desc">
+            <li>Diseño y maquetación de revistas para producción impresa (<em>High Class Magazine</em>, <em>Venezuela Inmobiliaria</em>).</li>
+            <li>Desarrollo de sistemas de identidad corporativa y materiales promocionales.</li>
+          </ul>
+        </article>
+
+        <article class="job fade-up">
+          <p class="job-date">2009 — 2010</p>
+          <h3 class="job-company">Pothegobbi Estudio Creativo</h3>
+          <p class="job-role">Graphic Designer</p>
+          <span class="job-location">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Nueva Esparta, Venezuela
+          </span>
+          <ul class="job-desc">
+            <li>Diseño de contenido visual para sitios web y redes sociales.</li>
+            <li>Desarrollo de assets digitales alineados con identidad de marca.</li>
+            <li>Proyectos creativos enfocados en presencia online y comunicación visual.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SKILLS
+  ═══════════════════════════════════════ -->
+  <section class="skills" id="skills">
+    <span class="section-tag">Habilidades</span>
+    <h2 class="section-heading">Mi set de<br>herramientas</h2>
+
+    <div class="skills-grid">
+
+      <!-- CARD 1 — Diseño Gráfico -->
+      <div class="skill-card fade-up">
+        <!-- PEN NIB / VECTOR icon -->
+        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 38L18 30L36 12"/>
+          <path d="M36 12L42 6L42 18L30 18Z" fill="currentColor" opacity=".15" stroke="currentColor"/>
+          <circle cx="18" cy="30" r="3"/>
+          <path d="M6 42L12 36"/>
+          <path d="M30 6L42 6"/>
+        </svg>
+        <h3 class="skill-card-title">Diseño Gráfico &amp; Creativo</h3>
+        <ul class="skill-list">
+          <li>Adobe Photoshop</li>
+          <li>Adobe Illustrator</li>
+          <li>Adobe InDesign</li>
+          <li>Figma</li>
+          <li>Canva</li>
+          <li>Branding &amp; Identidad</li>
+          <li>Diseño Editorial</li>
+          <li>Diseño para Redes Sociales</li>
+          <li>Creación de Contenido Visual</li>
+          <li>Diseño de Presentaciones</li>
+          <li>Packaging Básico</li>
+          <li>Dirección Creativa</li>
+        </ul>
+      </div>
+
+      <!-- CARD 2 — Web & Digital -->
+      <div class="skill-card fade-up">
+        <!-- BROWSER / LAYERS icon -->
+        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="6" y="10" width="36" height="28" rx="3"/>
+          <path d="M6 18H42"/>
+          <circle cx="12" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="18" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+          <circle cx="24" cy="14" r="1.5" fill="currentColor" stroke="none"/>
+          <rect x="12" y="23" width="11" height="9" rx="1.5"/>
+          <line x1="27" y1="24" x2="36" y2="24"/>
+          <line x1="27" y1="28" x2="34" y2="28"/>
+          <line x1="27" y1="32" x2="32" y2="32"/>
+        </svg>
+        <h3 class="skill-card-title">Web &amp; Diseño Digital</h3>
+        <ul class="skill-list">
+          <li>Diseño Web</li>
+          <li>WordPress</li>
+          <li>Webflow (Beginner)</li>
+          <li>HubSpot (Beginner)</li>
+          <li>Responsive Design</li>
+          <li>Fundamentos UX/UI</li>
+          <li>Landing Page Design</li>
+          <li>Organización de Assets Digitales</li>
+        </ul>
+      </div>
+
+      <!-- CARD 3 — Content & Marketing -->
+      <div class="skill-card fade-up">
+        <!-- BAR CHART + SIGNAL icon -->
+        <svg class="skill-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="8" y1="40" x2="40" y2="40"/>
+          <rect x="10" y="30" width="7" height="10" rx="1" fill="currentColor" opacity=".25" stroke="none"/>
+          <rect x="10" y="30" width="7" height="10" rx="1"/>
+          <rect x="21" y="22" width="7" height="18" rx="1" fill="currentColor" opacity=".45" stroke="none"/>
+          <rect x="21" y="22" width="7" height="18" rx="1"/>
+          <rect x="32" y="13" width="7" height="27" rx="1" fill="currentColor" opacity=".65" stroke="none"/>
+          <rect x="32" y="13" width="7" height="27" rx="1"/>
+          <path d="M14 22L21 14L29 18L38 8"/>
+          <polyline points="33 8 38 8 38 13"/>
+        </svg>
+        <h3 class="skill-card-title">Contenido &amp; Marketing</h3>
+        <ul class="skill-list">
+          <li>Creación de Contenido</li>
+          <li>Edición de Reels y Video Corto</li>
+          <li>CapCut</li>
+          <li>Comunicación Visual</li>
+          <li>Consistencia de Marca</li>
+          <li>Marketing Digital</li>
+          <li>Contenido para Redes Sociales</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       EDUCATION & LANGUAGES
+  ═══════════════════════════════════════ -->
+  <section class="education" id="education">
+
+    <div class="edu-visual" aria-hidden="true">
+      <div class="edu-circle"></div>
+      <div class="edu-circle"></div>
+      <div class="edu-circle"></div>
+      <div class="edu-inner-text">
+        <p class="year">2010</p>
+        <p class="label">Graduada</p>
+      </div>
+    </div>
+
+    <div>
+      <span class="section-tag">Formación</span>
+      <h2 class="section-heading">Educación &amp;<br>Idiomas</h2>
+
+      <div class="edu-detail fade-up">
+        <p class="edu-degree">Licenciatura en Diseño Gráfico</p>
+        <p class="edu-school">Universidad de Margarita</p>
+        <p class="edu-place">Venezuela &nbsp;·&nbsp; 2005 — 2010</p>
+      </div>
+
+      <div class="edu-langs">
+        <div class="lang-row fade-up">
+          <div class="lang-header">
+            <span class="lang-name">Español</span>
+            <span class="lang-level">Nativo — C2</span>
+          </div>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+        </div>
+        <div class="lang-row fade-up">
+          <div class="lang-header">
+            <span class="lang-name">English</span>
+            <span class="lang-level">Upper Intermediate — B2</span>
+          </div>
+          <div class="lang-bar"><div class="lang-fill" style="width:72%"></div></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════ -->
+  <section class="contact" id="contact">
+
+    <div>
+      <span class="section-tag">Contacto</span>
+      <h2 class="section-heading">¿Hablamos?</h2>
+      <p class="contact-tagline">
+        ¿Tenés un proyecto en mente, una colaboración o simplemente querés decir hola? Estoy disponible para trabajo remoto y freelance.
+      </p>
+    </div>
+
+    <div class="contact-items">
+
+      <div class="contact-item">
+        <!-- EMAIL icon -->
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2"/>
+          <path d="M2 7l10 7 10-7"/>
+        </svg>
+        <div>
+          <p class="contact-item-label">Email</p>
+          <p class="contact-item-value">pjfb2101@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <!-- PHONE icon -->
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.86 19.86 0 0 1 3.09 4.18 2 2 0 0 1 5.07 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L9.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <div>
+          <p class="contact-item-label">Teléfono / WhatsApp</p>
+          <p class="contact-item-value">+54 9 11 5868 2241</p>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <!-- MAP PIN icon -->
+        <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+        <div>
+          <p class="contact-item-label">Ubicación</p>
+          <p class="contact-item-value">Buenos Aires, Argentina</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer>
+    <span class="footer-name">Patricia Fierro</span>
+    <span class="footer-copy">© 2025 — Todos los derechos reservados</span>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       JS — nav scroll + fade-up + mobile menu
+  ═══════════════════════════════════════ -->
+  <script>
+    // Nav scroll behaviour
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu toggle
+    const toggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => navLinks.classList.remove('open'));
+    });
+
+    // Fade-up on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
