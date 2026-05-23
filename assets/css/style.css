@@ -543,6 +543,16 @@ h2 .highlighted-heading {
   text-decoration: none;
 }
 
+.job-logo {
+  display: block;
+  height: 32px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
 .card {
   background-color: white;
   border-radius: 12px;
