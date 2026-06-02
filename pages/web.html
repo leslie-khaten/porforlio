@@ -231,7 +231,7 @@
     /* Process */
     .process-steps {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 16px;
       margin-top: 32px;
     }
@@ -240,7 +240,22 @@
       background: #fafafa;
       border-radius: 12px;
       padding: 24px 18px;
-      counter-increment: step-counter;
+    }
+
+    .process-step-number {
+      font-family: 'Futura Bk BT', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      background: #312579;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      letter-spacing: 0;
     }
 
     .process-step h3 {
@@ -296,10 +311,6 @@
 
       .process-steps {
         grid-template-columns: repeat(2, 1fr);
-      }
-
-      .process-steps .process-step:last-child {
-        grid-column: 1 / -1;
       }
 
       .web-hero-subtitle {
@@ -520,28 +531,27 @@
         <div class="process-steps">
 
           <div class="process-step">
+            <div class="process-step-number">1</div>
             <h3>Discovery &amp; Design</h3>
             <p>Goals, audience, brand, and site map. Wireframes or mockups before a line of code is written.</p>
           </div>
 
           <div class="process-step">
+            <div class="process-step-number">2</div>
             <h3>Development</h3>
             <p>WordPress setup, theme configuration, and page building — clean, semantic markup throughout.</p>
           </div>
 
           <div class="process-step">
+            <div class="process-step-number">3</div>
             <h3>Migration &amp; 301 Redirects</h3>
             <p>Content transfer and redirect mapping to protect SEO equity during platform changes.</p>
           </div>
 
           <div class="process-step">
+            <div class="process-step-number">4</div>
             <h3>Optimization &amp; QA</h3>
             <p>Performance tuning, Core Web Vitals review, cross-browser testing, and accessibility checks.</p>
-          </div>
-
-          <div class="process-step">
-            <h3>Handoff &amp; Training</h3>
-            <p>Documentation and a live walkthrough so you can manage content confidently from day one.</p>
           </div>
 
         </div>
